@@ -2269,3 +2269,186 @@ a.info-card-value:focus-visible {
     font-size: 1rem;
   }
 }
+
+/* ==========================================================================
+   AI AGENT REDESIGN STYLES (Production & Recruiter Ready)
+   ========================================================================== */
+.ai-project-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  width: 100%;
+}
+.ai-badge {
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.15), rgba(59, 130, 246, 0.15));
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  color: #22d3ee;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.1);
+}
+.ai-title {
+  font-size: 1.15rem !important;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
+  margin-bottom: 0 !important;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ai-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #94a3b8;
+  margin-bottom: 16px;
+  text-align: left;
+}
+.ai-section {
+  margin-bottom: 16px;
+  text-align: left;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 12px;
+}
+.ai-section-title {
+  font-size: 0.72rem !important;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #3b82f6;
+  margin-bottom: 8px !important;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ai-section-title i {
+  font-size: 0.85rem;
+  color: #22d3ee;
+}
+.ai-features {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ai-features li {
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  line-height: 1.45;
+}
+.ai-features li strong {
+  color: #f1f5f9;
+  font-weight: 600;
+}
+.ai-features li::before {
+  content: "✦";
+  color: #22d3ee;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.ai-tech-stack {
+  justify-content: flex-start !important;
+  margin-top: 0 !important;
+  gap: 6px !important;
+}
+.ai-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.skill-tag {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  font-size: 0.68rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+.skill-tag:hover {
+  background: rgba(34, 211, 238, 0.1);
+  border-color: rgba(34, 211, 238, 0.3);
+  color: #22d3ee;
+}
+.ai-optional-box {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px dashed rgba(59, 130, 246, 0.25);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+.ai-optional-box .ai-section-title {
+  border-top: none;
+  padding-top: 0;
+}
+.ai-optional-text {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* Light mode adjustments */
+body.light-mode .ai-title {
+  color: #2d2a55;
+}
+body.light-mode .ai-badge {
+  background: rgba(99, 102, 241, 0.08);
+  border-color: rgba(99, 102, 241, 0.25);
+  color: #4f46e5;
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.05);
+}
+body.light-mode .ai-desc {
+  color: #64748b;
+}
+body.light-mode .ai-section {
+  border-top: 1px solid rgba(150, 143, 196, 0.15);
+}
+body.light-mode .ai-section-title {
+  color: #4f46e5;
+}
+body.light-mode .ai-section-title i {
+  color: #0ea5e9;
+}
+body.light-mode .ai-features li {
+  color: #475569;
+}
+body.light-mode .ai-features li strong {
+  color: #1e293b;
+}
+body.light-mode .ai-features li::before {
+  color: #0ea5e9;
+}
+body.light-mode .skill-tag {
+  background: #fff;
+  border: 1px solid rgba(150, 143, 196, 0.25);
+  color: #5d578b;
+}
+body.light-mode .skill-tag:hover {
+  background: rgba(99, 102, 241, 0.06);
+  border-color: rgba(99, 102, 241, 0.35);
+  color: #4f46e5;
+}
+body.light-mode .ai-optional-box {
+  background: #fff;
+  border: 1px dashed rgba(99, 102, 241, 0.25);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.04);
+}
+body.light-mode .ai-optional-text {
+  color: #475569;
+}
+

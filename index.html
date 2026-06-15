@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="chatbot.css" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
   <!-- Add this in the <head> of your HTML -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -24,7 +25,7 @@
 
     <nav id="navbar" class="nav">
       <ul class="nav-links">
-        <li><a href="#" class="nav-link active-link">Home</a></li>
+        <li><a href="#home" class="nav-link active-link">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#Skills" class="nav-link">Skills</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
@@ -67,7 +68,7 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="hero">
+  <section id="home" class="hero">
     <div class="hero-content">
       <div class="profile-wrapper">
         <div class="profile-glow">
@@ -105,7 +106,7 @@
           </a>
         </div>
         <div class="hero-buttons">
-          <a href="#" onclick="HireMe(event)" class="btn blue">Hire Me</a>
+          <a href="#projects" class="btn blue">My Projects</a>
           <a href="#contact" class="btn dark">Contact Me</a>
         </div>
       </div>
@@ -506,9 +507,8 @@
           </div>
         </div>
         <div class="project-card-actions">
-          <!-- Set href to your APK path (same folder, /apk/..., or a release URL) and keep the download attribute -->
-          <a class="project-action-btn project-apk-link" href="application-4a2c45e6-60fd-4282-88c9-0951a3351715.apk"
-            target="_blank" rel="noopener noreferrer" download><i class="ri-download-2-line" aria-hidden="true"></i><span>APK</span></a>
+          <a class="project-action-btn project-live-link" href="https://project-majestic-cauliflower-145.magicpatterns.app/" target="_blank" rel="noopener noreferrer"><i class="ri-external-link-line"
+            aria-hidden="true"></i><span>Live Link</span></a>
           <a class="project-action-btn project-source-link"
             href="https://github.com/Meet-Prajapati-MP/React-Native-InvoiceBill" target="_blank"
             rel="noopener noreferrer"><i class="ri-github-fill" aria-hidden="true"></i><span>Source</span></a>
@@ -593,15 +593,25 @@
           <img src="HR_Screening.png" loading="lazy" alt="HR Screening AI Agent">
         </div>
         <div class="project-info">
-          <h3>AI agent for Screening Job applications from job platform (LinkedIn , Indeed ,etc) and Gmail. 
-            Reduce time and effort for HR teams by automating the initial screening process, allowing them to focus on qualified candidates.
-          </h3>
-          <div class="tech-stack">
-            <span class="tech">N8N</span>
-            <span class="tech">Slack Notify</span>
-            <span class="tech">Platform API</span>
-            <span class="tech">Gmail API</span>
-            <span class="tech">Airtable</span>
+          <div class="ai-project-header">
+            <span class="ai-badge">Enterprise Pipeline</span>
+            <h3 class="ai-title">HR Screening & Recruitment Agent</h3>
+          </div>
+          
+          <p class="ai-desc">
+            An automated AI system that collects candidate job applications and resumes from LinkedIn, Indeed, and Gmail. It reads through the resumes, screens the candidates by matching their skills against job requirements, and rates them. It then saves the candidate profiles in Airtable and sends quick summary alerts to the HR team on Slack.
+          </p>
+
+          <div class="ai-section" style="margin-bottom: 0;">
+            <h4 class="ai-section-title"><i class="ri-cpu-line"></i> Tech Stack</h4>
+            <div class="tech-stack ai-tech-stack">
+              <span class="tech">n8n</span>
+              <span class="tech">Slack Notify</span>
+              <span class="tech">Platform API</span>
+              <span class="tech">Gmail API</span>
+              <span class="tech">Airtable</span>
+              <span class="tech">OpenRouter</span>
+            </div>
           </div>
         </div>
         <div class="project-card-actions project-card-actions--empty" aria-hidden="true"></div>
@@ -612,14 +622,25 @@
           <img src="WhatsApp_AI_Agent.png" loading="lazy" alt="WhatsApp AI Agent">
         </div>
         <div class="project-info">
-          <h3>AI agent for startup grants & updates, with a Pro Plan for real-time alerts and
-            personalized insights.</h3>
-          <div class="tech-stack">
-            <span class="tech">Make.com</span>
-            <span class="tech">Business WhatsApp</span>
-            <span class="tech">AI Sensy</span>
-            <span class="tech">Facebook Manager</span>
-            <span class="tech">Airtable</span>
+          <div class="ai-project-header">
+            <span class="ai-badge">Business Intelligence</span>
+            <h3 class="ai-title">Startup Grants Intelligence Agent<br> ( WhatsApp AI Agent )</h3>
+          </div>
+          
+          <p class="ai-desc">
+            An automated tool that constantly scans government and private websites for new startup grants. It uses AI to read long, complex grant application documents and turns them into simple eligibility summaries. It then sends instant, personalized WhatsApp alerts to matching startup founders so they never miss an opportunity.
+          </p>
+
+          <div class="ai-section" style="margin-bottom: 0;">
+            <h4 class="ai-section-title"><i class="ri-cpu-line"></i> Tech Stack</h4>
+            <div class="tech-stack ai-tech-stack">
+              <span class="tech">Make.com</span>
+              <span class="tech">Business WhatsApp</span>
+              <span class="tech">AI Sensy</span>
+              <span class="tech">Facebook Manager</span>
+              <span class="tech">Airtable</span>
+              <span class="tech">OpenRouter</span>
+            </div>
           </div>
         </div>
         <div class="project-card-actions project-card-actions--empty" aria-hidden="true"></div>
@@ -630,13 +651,53 @@
           <img src="Invoice_Reader.png" loading="lazy" alt="Invoice Reader AI Agent">
         </div>
         <div class="project-info">
-          <h3>AI agent for automatically reading and extracting key information from invoices, such as vendor details, amounts, due dates, and line items. This streamlines the accounts payable process and reduces manual data entry errors.
-          </h3>
-          <div class="tech-stack">
-            <span class="tech">N8N</span>
-            <span class="tech">Platform API</span>
-            <span class="tech">Gmail API</span>
-            <span class="tech">Airtable</span>
+          <div class="ai-project-header">
+            <span class="ai-badge">Accounts Payable</span>
+            <h3 class="ai-title">Intelligent OCR Invoice Processing Pipeline</h3>
+          </div>
+          
+          <p class="ai-desc">
+            An automated billing assistant that reads invoices sent to Gmail or uploaded to shared folders. It uses smart image-reading AI to extract important details like vendor names, amounts, item lists, and due dates. It automatically double-checks the math for mistakes or double-billing and saves the clean data directly to financial sheets.
+          </p>
+
+          <div class="ai-section" style="margin-bottom: 0;">
+            <h4 class="ai-section-title"><i class="ri-cpu-line"></i> Tech Stack</h4>
+            <div class="tech-stack ai-tech-stack">
+              <span class="tech">N8N</span>
+              <span class="tech">Platform API</span>
+              <span class="tech">Gmail API</span>
+              <span class="tech">Airtable</span>
+              <span class="tech">LlamaParse</span>
+              <span class="tech">Groq AI</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card-actions project-card-actions--empty" aria-hidden="true"></div>
+      </article>
+
+      <article class="project-card" data-category="ai-agent">
+        <div class="project-card-media">
+          <img src="AI_Assistant.png" loading="lazy" alt="AI Assistant Agent">
+        </div>
+        <div class="project-info">
+          <div class="ai-project-header">
+            <span class="ai-badge">Conversational Agent</span>
+            <h3 class="ai-title">Interactive Portfolio AI Assistant</h3>
+          </div>
+          
+          <p class="ai-desc">
+            A friendly chatbot built directly into my portfolio website. It acts as my personal assistant, answering recruiter questions about my experience, skills, and projects in a conversational way. It can also capture contact info and help visitors book a calendar meeting with me.
+          </p>
+
+          <div class="ai-section" style="margin-bottom: 0;">
+            <h4 class="ai-section-title"><i class="ri-cpu-line"></i> Tech Stack</h4>
+            <div class="tech-stack ai-tech-stack">
+              <span class="tech">N8N</span>
+              <span class="tech">Groq API</span>
+              <span class="tech">Prompt Engineering</span>
+              <span class="tech">Supabase Vector</span>
+              <span class="tech">LangChain</span>
+            </div>
           </div>
         </div>
         <div class="project-card-actions project-card-actions--empty" aria-hidden="true"></div>
@@ -647,9 +708,22 @@
           <img src="Any_Q.png" loading="lazy" alt="Any_Q AI agent">
         </div>
         <div class="project-info">
-          <h3>The AI Agent provides comprehensive answers to all user questions.</h3>
-          <div class="tech-stack">
-            <span class="tech">Make.com</span>
+          <div class="ai-project-header">
+            <span class="ai-badge">Knowledge Synthesis</span>
+            <h3 class="ai-title">Telegram AI Knowledge Assistant</h3>
+          </div>
+          
+          <p class="ai-desc">
+            An intelligent AI-powered Telegram assistant designed to answer user queries in real time through natural conversations. The system uses advanced conversational AI, workflow automation, and contextual response generation to provide accurate, human-like answers directly inside Telegram.
+
+          <div class="ai-section" style="margin-bottom: 0;">
+            <h4 class="ai-section-title"><i class="ri-cpu-line"></i> Tech Stack</h4>
+            <div class="tech-stack ai-tech-stack">
+              <span class="tech">Make.com</span>
+              <span class="tech">Telegram Bot API</span>
+              <span class="tech">Open AI API</span>
+              <span class="tech">Prompt Engineering</span>
+            </div>
           </div>
         </div>
         <div class="project-card-actions project-card-actions--empty" aria-hidden="true"></div>
@@ -660,10 +734,23 @@
           <img src="Color_Fetch.png" loading="lazy" alt="Color and font extraction AI agent">
         </div>
         <div class="project-info">
-          <h3>Users can upload any image, and the AI Agent will extract relevant color codes and font families.</h3>
-          <div class="tech-stack">
-            <span class="tech">Make.com</span>
-            <span class="tech">Telegram</span>
+          <div class="ai-project-header">
+            <span class="ai-badge">Design Token Automation</span>
+            <h3 class="ai-title">ColorFetch: Intelligent Brand Harvester</h3>
+          </div>
+          
+          <p class="ai-desc">
+            A handy design tool running inside Telegram. Users can send any screenshot or design image, and the AI bot instantly extracts the color palette (HEX and RGB codes) and identifies the font styles. It delivers ready-to-use design styles in seconds, making life easier for designers and developers.
+          </p>
+
+          <div class="ai-section" style="margin-bottom: 0;">
+            <h4 class="ai-section-title"><i class="ri-cpu-line"></i> Tech Stack</h4>
+            <div class="tech-stack ai-tech-stack">
+              <span class="tech">Make.com</span>
+              <span class="tech">Telegram Bot API</span>
+              <span class="tech">Prompt Engineering</span>
+              <span class="tech">GPT-4o Vision</span>
+            </div>
           </div>
         </div>
         <div class="project-card-actions project-card-actions--empty" aria-hidden="true"></div>
@@ -674,11 +761,23 @@
           <img src="Commentor.png" loading="lazy" alt="Code commentor AI agent">
         </div>
         <div class="project-info">
-          <h3>Uploaded code snippets can be analyzed by the AI Agent to identify and resolve errors, as well as to add
-            comments and explanations.</h3>
-          <div class="tech-stack">
-            <span class="tech">Make.com</span>
-            <span class="tech">Telegram</span>
+          <div class="ai-project-header">
+            <span class="ai-badge">Developer Tooling</span>
+            <h3 class="ai-title">CodeMentor: Secure Automated Code Analyst</h3>
+          </div>
+          
+          <p class="ai-desc">
+            A smart coding companion running on Telegram. Developers can upload code snippets, and the AI instantly reviews the code, explains how it works, finds bugs, and offers optimized, clean alternatives. It also automatically adds helpful code comments and documentation, saving developers time.
+          </p>
+
+          <div class="ai-section" style="margin-bottom: 0;">
+            <h4 class="ai-section-title"><i class="ri-cpu-line"></i> Tech Stack</h4>
+            <div class="tech-stack ai-tech-stack">
+              <span class="tech">Make.com</span>
+              <span class="tech">Telegram Bot API</span>
+              <span class="tech">Prompt Engineering</span>
+              <span class="tech">GPT-4o Vision</span>
+            </div>
           </div>
         </div>
         <div class="project-card-actions project-card-actions--empty" aria-hidden="true"></div>
@@ -802,7 +901,7 @@
           <p class="edu-degree">Master in Computer Application (MCA)</p>
           <div class="edu-details">
             <span><i class="ri-calendar-line" aria-hidden="true"></i>2024–2026</span>
-            <span><i class="ri-graduation-cap-line" aria-hidden="true"></i>CGPA 8.00</span>
+            <span><i class="ri-graduation-cap-line" aria-hidden="true"></i>CGPA 8.89</span>
           </div>
         </article>
 
@@ -878,6 +977,7 @@
   </section>
 
   <script src="script.js"></script>
+  <script src="chatbot.js"></script>
 </body>
 
 </html>

@@ -67,30 +67,51 @@ document.addEventListener("click", (event) => {
 
 
 const sections = document.querySelectorAll("section");
-  const navLinks1 = document.querySelectorAll(".nav-link");
+const activeSections = {};
 
-  const observern = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Remove active class from all
-          navLinks1.forEach(link => link.classList.remove("active-link"));
+const observern = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      activeSections[entry.target.id] = entry.isIntersecting;
+    });
 
-          // Add to the one in view
-          const id = entry.target.id;
-          const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
-          if (activeLink) {
-            activeLink.classList.add("active-link");
-          }
+    let activeId = null;
+    let maxVisibleHeight = -1;
+
+    sections.forEach((section) => {
+      if (activeSections[section.id]) {
+        const rect = section.getBoundingClientRect();
+        const visibleTop = Math.max(0, rect.top);
+        const visibleBottom = Math.min(window.innerHeight, rect.bottom);
+        const visibleHeight = visibleBottom - visibleTop;
+
+        if (visibleHeight > maxVisibleHeight) {
+          maxVisibleHeight = visibleHeight;
+          activeId = section.id;
+        }
+      }
+    });
+
+    if (activeId) {
+      navLinks.forEach((link) => {
+        const href = link.getAttribute("href");
+        if (href === `#${activeId}` || (activeId === "home" && href === "#")) {
+          link.classList.add("active-link");
+        } else {
+          link.classList.remove("active-link");
         }
       });
-    },
-    {
-      threshold: 0.5 // Trigger when 50% of section is in view
     }
-  );
+  },
+  {
+    root: null,
+    threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+  }
+);
 
-  // Observe each section
+sections.forEach((section) => {
+  observern.observe(section);
+});
  const revealSections = document.querySelectorAll(
   '#about, #Skills, #projects, #education, #experience, #contact'
 );
